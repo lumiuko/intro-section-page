@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header class="header">
+      <span class="header-logo">snap</span>
+
+      <!-- Desktop nav -->
+      <nav class="desktop-nav">
+        <div class="desktop-menu">
+          <button class="desktop-nav-btn" aria-expanded="false" aria-haspopup="menu" data-menu>
+            <span>Features</span>
+            <img src="/icon-arrow-down.svg" alt="Arrow down" />
+          </button>
+          <ul class="desktop-menu-body invisible">
+            <li>
+              <a href="#" class="menu-body-list-item">
+                <img src="/icon-todo.svg" />
+                <span>Todo List</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-body-list-item">
+                <img src="/icon-calendar.svg" />
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-body-list-item">
+                <img src="/icon-reminders.svg" />
+                <span>Reminders</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-body-list-item">
+                <img src="/icon-planning.svg" />
+                <span>Planning</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="desktop-menu">
+          <button class="desktop-nav-btn" aria-expanded="false" aria-haspopup="menu" data-menu>
+            <span>Company</span>
+            <img src="/icon-arrow-down.svg" alt="Arrow down" />
+          </button>
+          <ul class="desktop-menu-body align-left invisible">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <a href="#">Careers</a>
+        <a href="#">About</a>
+        <div class="desktop-nav-right">
+          <a href="#">Login</a>
+          <a href="#" class="nav-action-btn">Register</a>
+        </div>
+      </nav>
+
+      <!-- Mobile nav -->
+      <button aria-label="Toggle menu" aria-expanded="false" aria-haspopup="menu" class="menu-btn" id="menu-btn">
+        <img src="/icon-menu.svg" alt="Hamburger icon" aria-hidden="true" id="icon-menu" />
+        <img src="/icon-close-menu.svg" class="hidden" alt="Close icon" aria-hidden="true" id="icon-close-menu" />
+      </button>
+      <div class="overlay" id="overlay"></div>
+      <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-list">
+          <div class="menu-group">
+            <button aria-expanded="false" aria-haspopup="menu" class="mobile-nav-btn" data-button>
+              <span>Features</span>
+              <img src="/icon-arrow-down.svg" alt="Arrow icon" class="menu-icon" />
+            </button>
+            <div class="menu-body" style="max-height: 0px; visibility: hidden;">
+              <ul class="menu-body-list">
+                <li>
+                  <a href="#" class="menu-body-list-item">
+                    <img src="/icon-todo.svg" />
+                    <span>Todo List</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="menu-body-list-item">
+                    <img src="/icon-calendar.svg" />
+                    <span>Calendar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="menu-body-list-item">
+                    <img src="/icon-reminders.svg" />
+                    <span>Reminders</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="menu-body-list-item">
+                    <img src="/icon-planning.svg" />
+                    <span>Planning</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu-group">
+            <button aria-expanded="false" aria-haspopup="menu" class="mobile-nav-btn" data-button>
+              <span>Company</span>
+              <img src="/icon-arrow-down.svg" alt="Arrow icon" class="menu-icon" />
+            </button>
+            <div class="menu-body" style="max-height: 0px; visibility: hidden;">
+              <ul class="menu-body-list">
+                <li><a href="#" class="menu-body-list-item">History</a></li>
+                <li><a href="#" class="menu-body-list-item">Our Team</a></li>
+                <li><a href="#" class="menu-body-list-item">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="#">Careers</a>
+          <a href="#">About</a>
+        </div>
+        <div class="mobile-nav-bottom">
+          <a href="#">Login</a>
+          <a href="#" class="nav-action-btn">Register</a>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <picture class="main-image">
+        <source srcset="/image-hero-desktop.png" media="(min-width: 1200px)" />
+        <img src="/image-hero-mobile.png" alt="Hero image" />
+      </picture>
+      <div class="main-content">
+        <div class="intro">
+          <h1 class="intro-title">
+            <span>Make</span>
+            <span class="block">remote work</span>
+          </h1>
+          <p class="intro-text">
+            Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+          </p>
+          <a class="main-content-btn" href="#">Learn more</a>
+        </div>
+        <div class="brands">
+          <img src="/client-databiz.svg" alt="Databiz logo" />
+          <img src="/client-audiophile.svg" alt="Audiophile logo" />
+          <img src="/client-meet.svg" alt="Meet logo" />
+          <img src="/client-maker.svg" alt="Maker logo" />
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
