@@ -331,6 +331,7 @@ a {
     order: 1;
     max-width: 480px;
     margin: 0;
+    margin-right: -2.25rem;
   }
 
   .main-content {
